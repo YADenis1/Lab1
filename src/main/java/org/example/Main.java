@@ -40,7 +40,11 @@ public class Main {
 //        Point3D p2 = new Point3D(1, 2, 3);
 //        System.out.print(p1.equals(p2));
 
-        Vector3D vector3D = new Vector3D(0, 0, 0, 3, 4, 0);
-        System.out.println(vector3D.getLength());
+        Vector3D vector1 = new Vector3D(0, 0, 0, 1, 2, 3);
+        Vector3D vector2 = new Vector3D(0, 0, 0, 4, 5, 6);
+        Verctor3DProcessor.printVector(Verctor3DProcessor.vec3DSumm(vector2, vector1));
+        Verctor3DProcessor.printVector(Verctor3DProcessor.vec3Ddifference(vector2, vector1));
+        System.out.println(Verctor3DProcessor.vec3DScalMultiplication(vector1, vector2));
+        System.out.println(Verctor3DProcessor.vec3DVeclMultiplication(vector1, vector2));
     }
 }

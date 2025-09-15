@@ -2,10 +2,7 @@ package org.example.SimpleClasses;
 
 import lombok.Getter;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Getter
@@ -31,7 +28,7 @@ public class Vector3D {
         this.length = Math.sqrt(Math.pow(pStart.getX()-pEnd.getX(), 2)+Math.pow(pStart.getY()-pEnd.getY(), 2)+Math.pow(pStart.getZ()-pEnd.getZ(),2));
     }
 
-    public Map<Character, Double> getDirection(){
+    public Map<Character, Double> direction(){
         Map<Character, Double> out = new HashMap<>();
         out.put('x', pEnd.getX()- pStart.getX());
         out.put('y', pEnd.getY()- pStart.getY());
@@ -39,6 +36,6 @@ public class Vector3D {
         return out;
     }
     public boolean equals(Vector3D vec) {
-        return pStart.equals(vec.pStart) && pEnd.equals(vec.pEnd);
+        return direction()==vec.direction();
     }
 }
